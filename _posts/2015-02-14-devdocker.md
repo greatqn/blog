@@ -190,7 +190,7 @@ docker run --name nexus -d \
 http://host:8082
 ```
 
-step7:安装ftp
+###step7:安装ftp
 ```
 https://registry.hub.docker.com/u/penlook/ftp/
 docker pull penlook/ftp
