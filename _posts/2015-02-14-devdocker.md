@@ -21,26 +21,32 @@ git clone https://github.com/tobegit3hub/seagull.git
 docker build -t tobegit3hub/seagull .
 ```
 运行：
+
 ```
 docker run -d -p 10086:10086 \
   -v /var/run/docker.sock:/var/run/docker.sock \
   tobegit3hub/seagull
 ```
+
 访问：
+
 ```
 http://host:10086 (host为主机的IP地址)
 ```
 
 查看容器：
+
 ```
 docker ps -a
 ```
 启动容器：
+
 ```
 docker start {cid}
 ```
 
 进入容器：
+
 ```
 docker exec -it {cid} /bin/bash
 ```
@@ -51,12 +57,14 @@ https://github.com/sameersbn/docker-redmine
 ```
 
 运行：
+
 ```
 docker run --name=redminemysql -d \
   -e 'DB_NAME=redmine_production' -e 'DB_USER=redmine' -e 'DB_PASS=password' \
   -v /opt/redmine/mysql:/var/lib/mysql \
   sameersbn/mysql
 ```
+
 ```
 docker run --name=redmine -it --rm -p 8081:80 \
   --link redminemysql:mysql \
@@ -65,6 +73,7 @@ docker run --name=redmine -it --rm -p 8081:80 \
 ```
 
 访问：
+
 ```
 http://host:8081 
 账号：admin 密码：admin
@@ -72,6 +81,7 @@ http://host:8081
 
 ###step3:安装svn
 自己写的buildfile:
+
 ```
 #
 # svn server Dockerfile
@@ -96,11 +106,13 @@ EXPOSE 3391
 CMD /svn.sh
 ```
 编译：
+
 ```
 docker build -t greatqn/svn .
 ```
 
 运行：
+
 ```
 docker run -d \
   --name svnserver \
@@ -110,6 +122,7 @@ docker run -d \
 ```
 
 访问：
+
 ```
 svn://host:3391/
 ```
@@ -132,6 +145,7 @@ docker run --name="wubin_lnmp" -d \
   wubin/lnmp_v1
 ```
 内部环境：
+
 ```
 nginx: master process /opt/nginx/sbin/nginx
 php-fpm: master process (/opt/php/etc/php-fpm.conf)  
@@ -150,6 +164,7 @@ set $host_dir   /opt/web/www;
 docker pull niaquinto/jenkins
 ```
 运行：
+
 ```
 docker run --name="jenkins" -d \
   -p 8099:8080 \
@@ -157,6 +172,7 @@ docker run --name="jenkins" -d \
   niaquinto/jenkins
 ```
 访问：
+
 ```
 http://host:8099
 ```
@@ -169,6 +185,7 @@ docker run --name nexus -d \
 ```
 
 访问：
+
 ```
 http://host:8082
 ```
@@ -187,11 +204,13 @@ docker run --name="ftp" -d \
 ```
 
 只可以用主动模式连接。
+
 ```
 ftp://host:1021
 ```
 
 docker容器的实体目录
+
 ```
 /var/lib/docker/aufs/mnt/{cid}
 ```
