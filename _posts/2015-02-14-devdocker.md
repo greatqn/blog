@@ -66,7 +66,7 @@ docker run --name=redminemysql -d \
 ```
 
 ```
-docker run --name=redmine -it --rm -p 8081:80 \
+docker run --name=redmine -it -d -p 8081:80 \
   --link redminemysql:mysql \
   -v /opt/redmine/data:/home/redmine/data \
   sameersbn/redmine
