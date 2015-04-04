@@ -130,7 +130,7 @@ svn://host:3391/
 ###step4:安装lnmp
 ```
 https://github.com/tutumcloud/tutum-docker-lamp
-docker push tutum/lamp
+docker pull tutum/lamp
 ```
 
 ```
