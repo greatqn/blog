@@ -3,4 +3,4 @@ baseurl: /blog
 markdown: redcarpet
 safe: false
 pygments: true
-title: 一剑飞虹
+title: Code and Life
