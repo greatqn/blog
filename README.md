@@ -41,3 +41,7 @@ StrayBirds
 
 博客主题来自 [modernist](https://github.com/orderedlist/modernist), 
 开源协议为 [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/)
+
+## 我的其他项目
+
+- 🎄 [Holiday Printables](https://holidayprintables.com) — 免费圣诞 / 节日可打印素材（降临节日历、涂色页、节日卡片等）
